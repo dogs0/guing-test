@@ -8,19 +8,34 @@ body {
 }
 
 nav {
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  width: 100%;
   background: #333;
-  padding: 10px;
   text-align: center;
 }
 
 nav a {
+  position: relative;
+  display: inline-block;
   color: white;
-  margin: 0 15px;
+  height: 100%;
+  padding: 10px 15px;
+  border-left-width:1px;
+  border-right-width:1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-style: solid;
   text-decoration: none;
+  transition: background-color 0.5s ease;
+  user-select: none;
 }
 
 nav a:hover {
   text-decoration: underline;
+  background-color: #888;
+  transition: background-color 0.25s ease;
 }
 
 .container {
