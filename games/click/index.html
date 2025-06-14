@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>🖱️</title>
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .counter {
+      font-size: 2em;
+      margin: 20px 0;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🖱️点击1.0</h1>
+    <p>你能点击多少次？</p>
+    <div class="counter" id="count">0</div>
+    <button onclick="increment()">点击我！</button>
+    <p><button onclick="reset()">重置</button></p>
+  </div>
+
+  <nav>
+    <a href="/">首页</a>
+    <a href="/about/">关于我们</a>
+    <a href="/contact/">联系我们</a>
+  </nav>
+
+  <p><a href="https://www.bilibili.com/video/BV1GJ411x7h7/">搁置</a>
+
+  <footer>© 2025.6 Gu-ing</footer>
+
+  <script>
+    let count = parseInt(localStorage.getItem('clickCount') || '0');
+    const counterEl = document.getElementById('count');
+    counterEl.innerText = count;
+
+    function increment() {
+      count++;
+      localStorage.setItem('clickCount', count);
+      counterEl.innerText = count;
+    }
+
+    function reset() {
+      count = 0;
+      localStorage.setItem('clickCount', count);
+      counterEl.innerText = count;
+    }
+  </script>
+</body>
+</html>
