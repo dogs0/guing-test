@@ -32,6 +32,10 @@ nav a:hover {
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
 
+.big-link {
+  font-size: 1.5em;
+}
+
 footer {
   text-align: center;
   color: #888;
